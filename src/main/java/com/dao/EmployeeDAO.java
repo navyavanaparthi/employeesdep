@@ -18,12 +18,12 @@ public class EmployeeDAO {
 	}
 
 	public Employee getEmployeeById(int empId) {
-		Employee emp = new Employee(0, "Employee Not Found!!!", 0.0, "", null, "", "");
+		Employee emp = new Employee();
 		return employeeRepository.findById(empId).orElse(emp);
 	}
 
 	public Employee getEmployeeByName(String empName) {
-		Employee emp = new Employee(0, "Employee Not Found!!!", 0.0, "", null, "", "");
+		Employee emp = new Employee();
 		
 		Employee employee = employeeRepository.getEmployeeByName(empName);
 		
